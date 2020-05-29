@@ -8,6 +8,6 @@ class Product < ApplicationRecord
 
   private
     def titleize_product
-      self.name - self.name.titleize
+      self.name = self.name.titleize
     end
 end
