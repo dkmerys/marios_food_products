@@ -11,6 +11,7 @@ class ReviewsController < ApplicationController
     @review = @product.reviews.new(review_params)
     if @review.save
       redirect_to product_path(@product)
+      flash[:notice] = "Review successfully added to product"
     else
       render :new
     end
@@ -45,6 +46,6 @@ class ReviewsController < ApplicationController
 
   private
     def review_params
-      params.require(:review).permit(:name, :lyrics)
+      params.require(:review).permit(:author, :content_body, :rating)
     end
 end

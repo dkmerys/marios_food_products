@@ -19,7 +19,7 @@ There are 2 ways to view this application
 
 ## Known Bugs
 
-No bugs currently known
+
  
 ## Support and contact details
 
