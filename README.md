@@ -16,6 +16,9 @@ There are 2 ways to view this application
 2. In the terminal, run `rails s` from the root directory
 3. Navigate to localhost:3000 in your browser
 
+To test admin functionality, sign in using the following credentials:
+email: dan@marios.com
+password: password
 
 ## Known Bugs
 
@@ -32,6 +35,7 @@ Git and GitHub,
 Ruby,
 Ruby Gems,
 Capybara,
+BCrypt,
 Ruby On Rails
 
 ### Specs

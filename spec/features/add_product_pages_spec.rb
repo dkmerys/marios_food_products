@@ -7,9 +7,10 @@ describe "the add a product process" do
     fill_in 'Email', :with => "dan@marios.com"
     fill_in 'Password', :with => "password"
     click_on 'Sign In'
-    visit products_path
+    click_on 'Products'
     click_link 'Create new product'
-    fill_in 'country of origin', :with => "USA"
+    save_and_open_page
+    fill_in 'Country of origin', :with => "USA"
     fill_in 'cost', :with => "8"
     fill_in 'name', :with => "miracle whip"
     click_on 'Create Product'
