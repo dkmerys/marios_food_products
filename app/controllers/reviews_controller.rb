@@ -1,5 +1,6 @@
 class ReviewsController < ApplicationController
   before_action :authorize, :except => [:show]
+  before_action :is_admin?, :only => [:edit, :destroy]
   
   def new
     @product = Product.find(params[:product_id])
