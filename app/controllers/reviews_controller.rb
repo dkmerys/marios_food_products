@@ -1,6 +1,9 @@
 class ReviewsController < ApplicationController
   before_action :authorize, :except => [:show]
-  before_action :is_admin?, :only => [:edit, :destroy]
+  before_action :only => [:edit, :destroy] do
+    redirect_to signin_path unless current_user && current_user.admin
+    flash[:notice] = "Only Administrators are allowed to do that. Please sign in with the proper credentials to proceed."
+  end
   
   def new
     @product = Product.find(params[:product_id])
