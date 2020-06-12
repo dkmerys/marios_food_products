@@ -10,6 +10,6 @@ Rails.application.routes.draw do
 
   get '/home', to: 'site#home'
   resources :products do
-    resources :reviews, except: [:destroy]
+    resources :reviews
   end
 end
