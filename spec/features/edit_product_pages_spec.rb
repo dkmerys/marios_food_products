@@ -11,6 +11,7 @@ describe "the edit a product process" do
     visit signin_path
     fill_in 'Email', :with => "admin@marios.com"
     fill_in 'Password', :with => "password"
+    click_on 'Sign In'
     visit products_path
     click_link 'Pine Nuts'
     click_link 'Edit'
@@ -25,6 +26,7 @@ describe "the edit a product process" do
     visit signin_path
     fill_in 'Email', :with => "admin@marios.com"
     fill_in 'Password', :with => "password"
+    click_on 'Sign In'
     visit products_path
     click_link 'Turmeric'
     click_link 'Edit'

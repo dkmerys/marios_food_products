@@ -5,6 +5,10 @@ class ReviewsController < ApplicationController
     flash[:notice] = "Only Administrators are allowed to do that. Please sign in with the proper credentials to proceed."
   end
   
+  def index
+    @reviews = Review.all
+    render :index
+  end
   def new
     @product = Product.find(params[:product_id])
     @review = @product.reviews.new
@@ -35,6 +39,7 @@ class ReviewsController < ApplicationController
   end
 
   def update
+    @product = Product.find(params[:product_id])
     @review = Review.find(params[:id])
     if @review.update(review_params)
       redirect_to product_path(@review.product)

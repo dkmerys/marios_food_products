@@ -1,3 +1,24 @@
 <h1>Mario's Fine Food Products</h1>
 
 <h4>We keep it simple to save you money</h4>
+
+ <div class="col-md-4">
+          <h5>Recent Products</h5>
+            <ul>
+              <% Product.three_recent.each do |product| %>
+              <li><%= link_to product.name, product_path(product) %></li>
+              <% end %>
+            </ul>
+          <h5>Most Reviewed</h5>
+            <ul>
+              <% Product.most_reviewed.each do |product| %>
+                <li><%= link_to product.name, product_path(product) %></li>
+              <% end %>
+            </ul>
+            <h5>Made in USA<h5>
+              <ul>
+              <% Product.made_in_usa.each do |product| %>
+                <li><%= link_to product.name, product_path(product) %></li>
+              <% end %>
+            </ul>
+        </div>

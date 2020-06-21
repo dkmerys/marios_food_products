@@ -27,20 +27,6 @@
           </nav>
           <%= yield %>
         </div>
-        <div class="col-md-4">
-          <h5>Recent Products</h5>
-            <ul>
-              <% Product.three_recent.each do |product| %>
-              <li><%= link_to product.name, product_path(product) %></li>
-              <% end %>
-            </ul>
-          <h5>Most Reviewed</h5>
-            <ul>
-              <% Product.most_reviewed.each do |product| %>
-                <li><%= link_to product.name, product_path(product) %></li>
-              <% end %>
-            </ul>
-        </div>
       </div>
     </div>
   </body>

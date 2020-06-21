@@ -9,7 +9,7 @@ describe "trying to add a review when not logged in" do
   it "attempts to add a revew to a product" do
     new_product = Product.create!({:name => "Tri-tip", :cost => 75, :country_of_origin => "Guatemala"})
     visit products_path
-    click_link 'Tri-tip'
+    click_link 'Tri Tip'
     click_link 'Add a review'
     expect(page).to have_content 'You need to be signed in to do that.'
   end

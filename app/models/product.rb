@@ -15,6 +15,8 @@ class Product < ApplicationRecord
     .order("reviews_count DESC")
     .limit(1)
   )}
+
+  scope :made_in_usa, -> { where(country_of_origin: 'usa')}
   private
     def titleize_product
       self.name = self.name.titleize
