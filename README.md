@@ -10,8 +10,6 @@ _This repository has the logic and spec files for the Mario's Speciality Foods a
 
 ## Setup/Installation Requirements
 
-There are 2 ways to view this application
-
 1. Clone this repository to your machine
 2. In the terminal, run `rails s` from the root directory
 3. Navigate to localhost:3000 in your browser
